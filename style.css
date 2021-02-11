@@ -2,7 +2,11 @@
 
 :root{
     --primary-color: #22254b;
+    --primary-color:  rgba(0, 0, 0, 0.9);
+    --primary-color: #141414;
     --secondary-color: #373b69;
+    --secondary-color: #4e3d53;
+    --secondary-color: #6930c3;
 }
 *{
     box-sizing: border-box;
@@ -14,6 +18,10 @@ body{
     margin: 0;
 }
 
+.container{
+    width: 95%;
+    margin: auto;
+}
 header{
     padding: 1rem;
     display: flex; 
@@ -40,13 +48,36 @@ header{
     background-color: var(--primary-color);
 }
 
+.showcase{
+    height: 50vh;
+    display: flex;
+    width: 95%;
+    margin: auto;
+}
+.showcase h3{
+    position: absolute;
+    top: 200px;
+}
+.showcase img {
+    width: 100vw;
+    height: 50vh;
+    display: none;
+}
+.showcase img:nth-of-type(1) {
+    width: 100vw;
+    height: 50vh;
+    display: block;
+}
 main {
+    margin-top: 20px;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .movie {
-    width: 300px;
+    width: 200px;
+    /* height: 300px; */
     margin: 1rem;
     background-color: var(--secondary-color);
     box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
@@ -54,6 +85,7 @@ main {
     overflow: hidden;
     border-radius: 3px;
     cursor: pointer;
+    justify-content: space-between;
 }
 
 .movie img{
@@ -67,6 +99,9 @@ main {
     justify-content: space-between;
     padding: 0.5rem 1rem 1rem;
     letter-spacing: 0.5px;
+    /* position: absolute;
+    top: 0px;
+    bottom: 60px; */
 }
 
 .move-info h3{
